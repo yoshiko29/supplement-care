@@ -1,0 +1,209 @@
+*:root {
+    --primary-color: #00b894;
+    --secondary-color: #2d3436;
+    --background-color: #e8f5e9;
+    --card-background: #fff;
+    --border-radius: 15px;
+    --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --success-color: #2ecc71;
+    --error-color: #ffc7d2;
+    --pill-color: #a8e063;
+    --pill-hover: #95cd41;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 600;
+    background: linear-gradient(45deg, var(--primary-color), #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.supplement-settings {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.supplement-list {
+    margin-bottom: 20px;
+}
+
+.supplement-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--pill-color), #817bff);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.supplement-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.supplement-item:hover {
+    transform: translateY(-3px);
+}
+
+.supplement-item input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+    transition: border-color 0.3s;
+}
+
+.supplement-item input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.time-settings {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.time-setting {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.time-setting label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+}
+
+input[type="time"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100px;
+    transition: border-color 0.3s;
+}
+
+input[type="time"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, var(--primary-color), #a29bfe);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.status-item {
+    background: linear-gradient(135deg, var(--pill-color), #817bff);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.status-item:hover {
+    transform: translateY(-3px);
+}
+
+.status-item span {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: white;
+    font-size: 1.2em;
+}
+
+.check-btn {
+    margin-top: 15px;
+}
+
+.status-item div {
+    font-size: 28px;
+    margin: 12px 0;
+    color: white;
+}
+
+.status-item .status-time {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.status-item .status-check {
+    color: var(--error-color);
+}
+
+.status-item .status-check.checked {
+    color: var(--success-color);
+}
+
+.delete-btn {
+    background: linear-gradient(45deg, #d63031, #ff4757);
+}
+
+.delete-btn:hover {
+    background-color: #ffb8c1;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.3);
+}

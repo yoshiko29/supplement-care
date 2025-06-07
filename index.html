@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サプリメント管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>サプリメント管理</h1>
+        
+        <div class="supplement-settings">
+            <h2>サプリメント設定</h2>
+            <div class="supplements-list" id="supplements-list">
+                <!-- サプリメントはJavaScriptで動的に追加 -->
+            </div>
+            <button id="add-supplement">サプリメントを追加</button>
+        </div>
+
+        <div class="time-settings">
+            <h2>通知時間設定</h2>
+            <div class="time-setting">
+                <label>朝: <input type="time" id="morning-time" value="08:00"></label>
+                <label>昼: <input type="time" id="noon-time" value="12:00"></label>
+                <label>夜: <input type="time" id="evening-time" value="20:00"></label>
+                <button id="save-times">設定を保存</button>
+            </div>
+        </div>
+
+        <div class="status">
+            <h2>今日の摂取状況</h2>
+            <div class="status-grid" id="status-grid">
+                <!-- ステータスはJavaScriptで動的に追加 -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
